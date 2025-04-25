@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Parcial3.Clases;
+using Parcial3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +15,7 @@ namespace Parcial3.Controllers
         [Route("CrearUsuario")]
         public string CrearUsuario([FromBody] Usuario usuario, int idPerfil)
         {
-            ClsUsuario Usuario = new ClsUsuario();
+            clsUsuario Usuario = new clsUsuario();
             Usuario.usuario = usuario;
             return Usuario.CrearUsuario(idPerfil);
         }

@@ -9,24 +9,25 @@
 
 namespace Parcial3.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class AdministradorITM
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AdministradorITM()
+        public Perfil()
         {
-            this.Torneos = new HashSet<Torneo>();
+            this.Usuario_Perfil = new HashSet<Usuario_Perfil>();
         }
     
-        public int idAministradorITM { get; set; }
-        public string Documento { get; set; }
-        public string NombreCompleto { get; set; }
-        public string Usuario { get; set; }
-        public string Clave { get; set; }
+        public int id { get; set; }
+        public string Nombre { get; set; }
+        public string PaginaNavegar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Torneo> Torneos { get; set; }
+
+        [JsonIgnore]
+        public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }
 }

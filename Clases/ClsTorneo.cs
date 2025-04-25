@@ -8,7 +8,7 @@ namespace Parcial3.Clases
 {
     public class ClsTorneo
     {
-        private DBEXAMEN3Entities1 db = new DBEXAMEN3Entities1(); // tu contexto
+        private DBExamenEntities db = new DBExamenEntities(); // tu contexto
 
         public Torneo torneo { get; set; }
 
